@@ -1,0 +1,19 @@
+# Terraform state and plan files
+*.tfstate
+*.tfstate.backup
+*.tfplan
+
+# Sensitive variable overrides
+terraform.tfvars
+*.tfvars
+
+# Terraform working directory
+.terraform/
+
+# Crash logs
+crash.log
+
+# Ignore IDE settings (optional)
+.vscode/
+.idea/
+*.swp
