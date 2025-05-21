@@ -1,6 +1,6 @@
 variable "name" {
   type    = string
-  default = "hiive"
+  default = "hv"
 }
 
 variable "vpc_cidr" {
