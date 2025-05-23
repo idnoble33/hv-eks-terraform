@@ -36,4 +36,5 @@ data "aws_eks_cluster_auth" "cluster" {
 
 module "app" {
   source = "./modules/app"
+  deploy_k8s_resources = var.deploy_k8s_resources
 }
