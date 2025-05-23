@@ -134,7 +134,7 @@ Each Terraform module is reusable and independent:
 | Tool      | Version         |
 | --------- | --------------- |
 | Terraform | >= 1.4          |
-| AWS EKS   | Kubernetes 1.28 |
+| AWS EKS   | Kubernetes 1.32 |
 | kubectl   | Latest stable   |
 
 ---

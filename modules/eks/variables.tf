@@ -10,3 +10,13 @@ variable "vpc_id" {
 variable "subnet_ids" {
   type = list(string)
 }
+
+variable "cluster_version" {
+    type = string
+  
+}
+variable "aws_region" {
+  description = "AWS region to deploy the infrastructure"
+  type        = string
+}
+

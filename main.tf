@@ -11,6 +11,8 @@ module "eks" {
   cluster_name = "hv-eks-cluster"
   vpc_id       = module.vpc.vpc_id
   subnet_ids   = module.vpc.private_subnet_ids
+  cluster_version = "1.30"
+  aws_region              = var.aws_region
 }
 
 provider "kubernetes" {
