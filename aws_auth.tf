@@ -1,4 +1,4 @@
-resource "kubernetes_config_map" "aws_auth" {
+resource "kubernetes_config_map_v1" "aws_auth" {
   metadata {
     name      = "aws-auth"
     namespace = "kube-system"
@@ -19,13 +19,10 @@ resource "kubernetes_config_map" "aws_auth" {
     ])
   }
 
-  depends_on = [module.eks]
-  
   lifecycle {
     ignore_changes = [
       metadata[0].annotations,
       metadata[0].labels
-      # Removed metadata[0].resource_version as it's redundant
     ]
   }
 }
