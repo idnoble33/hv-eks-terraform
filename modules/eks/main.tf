@@ -19,12 +19,16 @@ module "eks" {
       min_capacity     = 1
       instance_types   = ["t3.medium"]
       
+      # IAM role configuration
       iam_role_additional_policies = {
         AmazonEBSCSIDriverPolicy = "arn:aws:iam::aws:policy/service-role/AmazonEBSCSIDriverPolicy"
       }
     }
   }
+
+  # Cluster add-ons and permissions
   enable_cluster_creator_admin_permissions = true
+  enable_irsa                              = true
 
   tags = {
     Environment = "hv"

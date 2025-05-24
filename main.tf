@@ -49,7 +49,6 @@ resource "time_sleep" "wait_for_cluster" {
 module "app" {
   source     = "./modules/app"
   depends_on = [
-    time_sleep.wait_for_cluster,
-    kubernetes_config_map_v1.aws_auth
+    time_sleep.wait_for_cluster
   ]
 }
